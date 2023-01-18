@@ -13,7 +13,7 @@ let clientes = require('./models/cliente')
 let database = require('./database/db')
 
 app.get('/clientes', async(req, res) => {
-    const consult = await clientes.findAll({
+    const consult1 = await clientes.findAll({
         attributes: [
             'CLICOD',
             'CLINOM'
@@ -21,6 +21,10 @@ app.get('/clientes', async(req, res) => {
     })
     res.send(consult)
 });
+
+app.get('/produtos', async(req, res) => {
+    const consult2 = await
+})
 
 app.listen(3000, () => {
     try {
